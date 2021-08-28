@@ -1,21 +1,34 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
 	{
 		path: '/',
 		name: 'Home',
-		component: Home,
+		component: () => import(/* webpackChunkName: "about" */ '../views/home/Home.vue'),
+		meta: {
+			title: '系统首页',
+		},
 	},
-]
+	{
+		// 404页面
+		path: '/404',
+		name: '404',
+		component: () => import(/* webpackChunkName: "about" */ '../views/404/404.vue'),
+		meta: {
+			title: '404',
+		},
+	},
+	{
+		path: '*',
+		redirect: '/404',
+	},
+];
 
 const router = new VueRouter({
-	mode: 'history',
-	base: process.env.BASE_URL,
 	routes,
-})
+});
 
-export default router
+export default router;

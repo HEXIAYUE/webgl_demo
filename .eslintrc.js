@@ -15,4 +15,4 @@ module.exports = {
 		'use-isnan': 2, // 要求检查NaN的时候使用isNaN()
 		quotes: ['error', 'single', { allowTemplateLiterals: true }], // 单引号 允许模板文字,
 	},
-}
+};
