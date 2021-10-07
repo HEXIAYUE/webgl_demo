@@ -20,19 +20,24 @@ export default {
 		return {
 			items: [
 				{
-					router: '/Upload',
-					svgClass: '#icontupianshangchuan',
-					text: '上传',
+					router: '/StereoModel',
+					svgClass: '#icon-zhengfangti',
+					text: '立体模型',
 				},
 				{
-					router: '/ImgShow',
-					svgClass: '#icontupianzhanshi',
-					text: '图片中心',
+					router: '/Mapping',
+					svgClass: '#icon-pifu',
+					text: '贴图',
 				},
 				{
-					router: '/ImgThree',
-					svgClass: '#iconsanwei',
-					text: '三维展示',
+					router: '/Lighting',
+					svgClass: '#icon-dengguang',
+					text: '灯光',
+				},
+                {
+					router: '/Controller',
+					svgClass: '#icon-kongzhiqi',
+					text: '控制器',
 				},
 			],
 		};
