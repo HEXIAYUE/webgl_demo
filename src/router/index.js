@@ -37,11 +37,27 @@ const routes = [
                 },
             },
             {
+                path: '/Dynamiceffect',
+                name: 'Dynamiceffect',
+                component: () => import(/* webpackChunkName: "about" */ '../views/component/Dynamiceffect.vue'),
+                meta: {
+                    title: '动效',
+                },
+            },
+            {
                 path: '/Controller',
                 name: 'Controller',
                 component: () => import(/* webpackChunkName: "about" */ '../views/component/Controller.vue'),
                 meta: {
                     title: '控制器',
+                },
+            },
+            {
+                path: '/Frame',
+                name: 'Frame',
+                component: () => import(/* webpackChunkName: "about" */ '../views/component/Frame.vue'),
+                meta: {
+                    title: '灯光',
                 },
             }
         ]

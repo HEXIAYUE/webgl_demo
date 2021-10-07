@@ -6,10 +6,8 @@ import store from './store';
 import './assets/style/common.css';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-// import * as THREE from 'three'
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-// Vue.prototype.$Three = THREE
 // Vue.prototype.$OrbitControls = OrbitControls
 Vue.use(ElementUI);
 Vue.config.productionTip = false;

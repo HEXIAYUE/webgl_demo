@@ -35,9 +35,19 @@ export default {
 					text: '灯光',
 				},
                 {
+					router: '/Dynamiceffect',
+					svgClass: '#icon-dongxiao',
+					text: '动效',
+				},
+                {
 					router: '/Controller',
 					svgClass: '#icon-kongzhiqi',
 					text: '控制器',
+				},
+                {
+					router: '/Frame',
+					svgClass: '#icon-yizhenshuju',
+					text: '帧数',
 				},
 			],
 		};
