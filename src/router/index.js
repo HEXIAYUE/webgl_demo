@@ -57,7 +57,7 @@ const routes = [
                 name: 'Frame',
                 component: () => import(/* webpackChunkName: "about" */ '../views/component/Frame.vue'),
                 meta: {
-                    title: '灯光',
+                    title: '帧数',
                 },
             }
         ]
