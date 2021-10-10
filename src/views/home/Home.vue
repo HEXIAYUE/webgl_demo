@@ -73,5 +73,6 @@ export default {
 	color: #333;
 	box-shadow: 0 0 0.08rem #333;
 	text-align: center;
+    padding: 0.05rem;
 }
 </style>

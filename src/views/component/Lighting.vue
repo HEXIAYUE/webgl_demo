@@ -1,32 +1,21 @@
 <!-- 组件说明 -->
 <template>
-    <div class=''>
-        
-    </div>
+	<div class=""></div>
 </template>
 
 <script>
-    //import x from ''
-    export default {
-        name:'Lighting',
-        components: {
-
-        },
-        data () {
-            return {
-
-            };
-        },
-        computed: {
-
-        },
-        methods: {
-
-        },
-    }
+//import x from ''
+export default {
+	name: 'Lighting',
+	components: {},
+	data() {
+		return {};
+	},
+	computed: {},
+	methods: {},
+};
 </script>
 
-<style lang='less' scoped>
+<style lang="less" scoped>
 //@import url()
-
 </style>
