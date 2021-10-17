@@ -66,6 +66,15 @@ const routes = [
 					title: '帧数',
 				},
 			},
+            {
+                path: '/Model',
+                name: 'Model',
+                component: () =>
+                    import(/* webpackChunkName: "about" */ '../views/component/Model.vue'),
+                meta: {
+                    title: '引入模型',
+                },
+            },
 		],
 	},
 	{

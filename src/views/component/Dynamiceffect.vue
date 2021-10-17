@@ -1,7 +1,7 @@
 <!-- 组件说明 -->
 <template>
-    <div id="app" ref="app">
-        <div id="container">
+    <div class="box" ref="dynamiceffect">
+        <div id="dynamiceffect">
             <!-- 显示帧率 -->
             <!-- <div id="Stats-output"></div> -->
         </div>
@@ -12,26 +12,29 @@
 import * as THREE from 'three';
 
 //场景 放在外面  避免vue遍历该变量 导致性能下降
-let screen = new THREE.Scene();
+let screen = null;
 export default {
-	name: 'app',
+	name: 'Dynamiceffect',
 	components: {},
 	data() {
 		return {
-            screen: new THREE.Scene(),
+			screen: new THREE.Scene(),
 			camera: null, // 相机
 			renderer: null, // 渲染器
-            cube: null, // 网格对象
+			cube: null, // 网格对象
+			stopRender: false, // 是否停止渲染
 		};
 	},
 	computed: {},
 	methods: {
 		// 初始化函数
 		init() {
+			screen = new THREE.Scene();
+			this.stopRender = false;
 			// 使用透视摄像机 属性含义，视野角度（FOV） 长宽比 远剪切面 近剪切面
 			this.camera = new THREE.PerspectiveCamera(
 				75,
-				this.$refs.app.clientWidth / this.$refs.app.clientHeight,
+				this.$refs.dynamiceffect.clientWidth / this.$refs.dynamiceffect.clientHeight,
 				0.1,
 				1000
 			);
@@ -40,13 +43,16 @@ export default {
 			screen.add(this.camera);
 			// 设置渲染器的大小 和挂载的dom结构
 			this.renderer = new THREE.WebGLRenderer();
-			//使用div的宽度，使模型一直在div中间 this.$refs.app.clientWidth window.innerWidth\
-			this.renderer.setSize(this.$refs.app.clientWidth, this.$refs.app.clientHeight);
+			//使用div的宽度，使模型一直在div中间 this.$refs.dynamiceffect.clientWidth window.innerWidth\
+			this.renderer.setSize(
+				this.$refs.dynamiceffect.clientWidth,
+				this.$refs.dynamiceffect.clientHeight
+			);
 			// 颜色
 			this.renderer.setClearColor(new THREE.Color(0x333333));
 			// 将渲染器挂载在div app下
-			const container = document.getElementById('container');
-			container.appendChild(this.renderer.domElement);
+			const dynamiceffect = document.getElementById('dynamiceffect');
+			dynamiceffect.appendChild(this.renderer.domElement);
 			// 添加正方体模型
 			// 创建一个正方体模型
 			let geometry = new THREE.BoxGeometry(1, 1, 1);
@@ -61,18 +67,27 @@ export default {
 		},
 		// 渲染函数
 		animate() {
-            this.cube.rotation.x += 0.01;
-            this.cube.rotation.y += 0.01;
+			this.cube.rotation.x += 0.01;
+			this.cube.rotation.y += 0.01;
 			//让模型一直保持在正中间
-			this.renderer.setSize(this.$refs.app.clientWidth, this.$refs.app.clientHeight);
+			this.renderer.setSize(
+				this.$refs.dynamiceffect.clientWidth,
+				this.$refs.dynamiceffect.clientHeight
+			);
 			// 使用动画循环函数 按照屏幕帧数渲染画面
-			requestAnimationFrame(this.animate);
-			this.renderer.render(screen, this.camera);
+			if (!this.stopRender) {
+				requestAnimationFrame(this.animate);
+				this.renderer.render(screen, this.camera);
+			}
 		},
 	},
-	mounted() {
-        console.log('2222');
+	activated() {
+		const dynamiceffect = document.getElementById('dynamiceffect');
+		dynamiceffect.innerHTML = '';
 		this.init();
+	},
+	deactivated() {
+		this.stopRender = true;
 	},
 };
 </script>
@@ -83,7 +98,7 @@ body {
 	overflow: hidden;
 }
 
-#app {
+#dynamiceffect {
 	width: 100%;
 }
 </style>

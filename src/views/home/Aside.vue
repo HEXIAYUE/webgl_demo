@@ -34,7 +34,7 @@ export default {
 					svgClass: '#icon-dengguang',
 					text: '灯光',
 				},
-                {
+				{
 					router: '/Dynamiceffect',
 					svgClass: '#icon-dongxiao',
 					text: '动效',
@@ -48,6 +48,11 @@ export default {
 					router: '/Frame',
 					svgClass: '#icon-yizhenshuju',
 					text: '帧数',
+				},
+                {
+					router: '/Model',
+					svgClass: '#icon-moxingdaoru',
+					text: '引入模型',
 				},
 			],
 		};
