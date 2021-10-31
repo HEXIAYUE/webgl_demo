@@ -72,7 +72,6 @@ export default {
 				this.$refs.stereoModel.clientWidth,
 				this.$refs.stereoModel.clientHeight
 			);
-            this.cube.geometry.center()
 			// 使用动画循环函数 按照屏幕帧数渲染画面
 			if (!this.stopRender) {
 				requestAnimationFrame(this.animate);
@@ -92,11 +91,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-body {
-	margin: 0;
-	overflow: hidden;
-}
-
 #stereoModel {
 	width: 100%;
 }

@@ -1,18 +1,18 @@
 <!-- 组件说明 -->
 <template>
-	<div class="header">
-		<div style="width: 2.5rem"></div>
-		<div class="title">webgl_demo 简单应用介绍</div>
-		<div class="user">
-			<el-avatar :src="imgSrc"></el-avatar>
-			<span>用户: {{ user }}</span>
-			<span title="跳转到博客" @click="loginOut">
-				<svg class="icon" aria-hidden="true">
-					<use xlink:href="#icon-zhuanfa"></use>
-				</svg>
-			</span>
-		</div>
-	</div>
+    <div class="header">
+        <div style="width: 2.5rem"></div>
+        <div class="title">webgl_demo 简单应用介绍</div>
+        <div class="user">
+            <el-avatar :src="imgSrc"></el-avatar>
+            <span>用户: {{ user }}</span>
+            <span title="跳转到博客" @click="loginOut">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zhuanfa"></use>
+                </svg>
+            </span>
+        </div>
+    </div>
 </template>
 
 <script>

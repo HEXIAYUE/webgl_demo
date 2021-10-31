@@ -42,9 +42,9 @@ export default {
 		};
 	},
 	mounted() {
-		// // 进入首页 默认加载上传页面 如果在其他页面刷新 路由还是其他页面
-		// let name = this.$route.name === 'Home' ? 'Upload' : this.$route.name;
-		// this.$router.push({ name: name });
+		// // 进入首页 默认加载第一页
+		let name = this.$route.name === 'Home' ? 'StereoModel' : this.$route.name;
+		this.$router.push({ name: name });
 	},
 };
 </script>

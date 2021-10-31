@@ -53,11 +53,20 @@ export default {
 			// 将渲染器挂载在div app下
 			const dynamiceffect = document.getElementById('dynamiceffect');
 			dynamiceffect.appendChild(this.renderer.domElement);
+            // 添加贴图
+			var texture = new THREE.TextureLoader().load(
+				require('../../assets/img/tietu.jpg')
+			);
+			texture.wrapS = THREE.RepeatWrapping;
+            texture.wrapT = THREE.RepeatWrapping;
 			// 添加正方体模型
 			// 创建一个正方体模型
 			let geometry = new THREE.BoxGeometry(1, 1, 1);
-			// 添加正方体颜色
-			let material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+			// 添加正方体材质
+			let material = new THREE.MeshBasicMaterial({
+				// 加载法向贴图
+				map: texture,
+			});
 			// 创建一个网格对象包含正方体的模型和材质
 			this.cube = new THREE.Mesh(geometry, material);
 			// 将网格添加到场景中
@@ -93,11 +102,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-body {
-	margin: 0;
-	overflow: hidden;
-}
-
 #dynamiceffect {
 	width: 100%;
 }

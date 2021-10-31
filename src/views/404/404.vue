@@ -1,17 +1,16 @@
 <template>
-	<div>
-		<div class="_404">
-			<h2 class="m-0">
-				抱歉，页面未找到，<span>{{ countDown }}</span
-				>s后自动跳转到
-				<a href="javascript:;" @click="goHome">首页</a>
-			</h2>
-			<img src="../../assets/img/404.png" alt="页面未找到" />
-		</div>
-		<div>
-			<v-footer></v-footer>
-		</div>
-	</div>
+    <div>
+        <div class="_404">
+            <h2 class="m-0">
+                抱歉，页面未找到，<span>{{ countDown }}</span>s后自动跳转到
+                <a href="javascript:;" @click="goHome">首页</a>
+            </h2>
+            <img src="'../../assets/img/img/404.png" alt="页面未找到" />
+        </div>
+        <div>
+            <v-footer></v-footer>
+        </div>
+    </div>
 </template>
 <script>
 import vFooter from '../../components/footer';
