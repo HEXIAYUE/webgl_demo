@@ -63,7 +63,7 @@ export default {
 			// 创建一个正方体模型
 			let geometry = new THREE.BoxGeometry(1, 1, 1);
 			// 添加正方体材质
-			let material = new THREE.MeshBasicMaterial({
+			let material = new THREE.MeshLambertMaterial({
 				// 加载法向贴图
 				map: texture,
 			});
@@ -71,6 +71,16 @@ export default {
 			this.cube = new THREE.Mesh(geometry, material);
 			// 将网格添加到场景中
 			screen.add(this.cube);
+
+            // 创建灯光
+			let spotLight = new THREE.SpotLight(0xffffff);
+			spotLight.position.set(-10, 20, 10);
+			spotLight.castShadow = true;
+			screen.add(spotLight); // 聚光灯添加到场景中
+
+			// 环境光
+			let ambientLight = new THREE.AmbientLight(0x0c0c0c); // 创建环境光
+			screen.add(ambientLight); // 将环境光添加到场景
 			// 调用渲染函数
 			this.animate();
 		},
