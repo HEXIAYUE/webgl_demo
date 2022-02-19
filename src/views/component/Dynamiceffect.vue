@@ -2,8 +2,6 @@
 <template>
     <div class="box" ref="dynamiceffect">
         <div id="dynamiceffect">
-            <!-- 显示帧率 -->
-            <!-- <div id="Stats-output"></div> -->
         </div>
     </div>
 </template>

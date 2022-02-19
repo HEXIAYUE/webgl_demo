@@ -2,8 +2,6 @@
 <template>
     <div class="box" ref="mapping">
         <div id="mapping">
-            <!-- 显示帧率 -->
-            <!-- <div id="Stats-output"></div> -->
         </div>
     </div>
 </template>
