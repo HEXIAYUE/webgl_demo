@@ -1,12 +1,10 @@
 <!-- 组件说明 -->
 <template>
-    <div class="box" ref="Frame">
-        <div id="Frame">
-            
-        </div>
-        <!-- 显示帧率 -->
-            <div id="Stats-output"></div>
-    </div>
+	<div class="box" ref="Frame">
+		<div id="Frame"></div>
+		<!-- 显示帧率 -->
+		<div id="Stats-output"></div>
+	</div>
 </template>
 
 <script>

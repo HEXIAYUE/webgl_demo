@@ -1,11 +1,11 @@
 <!-- 组件说明 -->
 <template>
-    <div class="box" ref="Controller">
-        <div id="Controller">
-            <!-- 显示帧率 -->
-            <!-- <div id="Stats-output"></div> -->
-        </div>
-    </div>
+	<div class="box" ref="Controller">
+		<div id="Controller">
+			<!-- 显示帧率 -->
+			<!-- <div id="Stats-output"></div> -->
+		</div>
+	</div>
 </template>
 
 <script>

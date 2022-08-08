@@ -1,11 +1,11 @@
 <!-- 组件说明 -->
 <template>
-    <div class="box" ref="stereoModel">
-        <div id="stereoModel">
-            <!-- 显示帧率 -->
-            <!-- <div id="Stats-output"></div> -->
-        </div>
-    </div>
+	<div class="box" ref="stereoModel">
+		<div id="stereoModel">
+			<!-- 显示帧率 -->
+			<!-- <div id="Stats-output"></div> -->
+		</div>
+	</div>
 </template>
 
 <script>
@@ -39,7 +39,7 @@ export default {
 			);
 			this.camera.position.z = 3;
 			// 将摄像头添加到场景中
-            this.camera.position.set(1, 1, 3);
+			this.camera.position.set(1, 1, 3);
 			screen.add(this.camera);
 			// 设置渲染器的大小 和挂载的dom结构
 			this.renderer = new THREE.WebGLRenderer();

@@ -1,9 +1,8 @@
 <!-- 组件说明 -->
 <template>
-    <div class="box" ref="mapping">
-        <div id="mapping">
-        </div>
-    </div>
+	<div class="box" ref="mapping">
+		<div id="mapping"></div>
+	</div>
 </template>
 
 <script>
@@ -48,11 +47,9 @@ export default {
 			const mapping = document.getElementById('mapping');
 			mapping.appendChild(this.renderer.domElement);
 			// 添加贴图
-			var texture = new THREE.TextureLoader().load(
-				require('../../assets/img/tietu.jpg')
-			);
+			var texture = new THREE.TextureLoader().load(require('../../assets/img/tietu.jpg'));
 			texture.wrapS = THREE.RepeatWrapping;
-            texture.wrapT = THREE.RepeatWrapping;
+			texture.wrapT = THREE.RepeatWrapping;
 
 			// 添加正方体模型
 			// 创建一个正方体模型

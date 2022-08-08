@@ -49,7 +49,7 @@ export default {
 					svgClass: '#icon-yizhenshuju',
 					text: '帧数',
 				},
-                {
+				{
 					router: '/Model',
 					svgClass: '#icon-moxingdaoru',
 					text: '引入模型',

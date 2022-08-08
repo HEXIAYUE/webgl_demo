@@ -1,9 +1,8 @@
 <!-- 组件说明 -->
 <template>
-    <div class="box" ref="lighting">
-        <div id="lighting">
-        </div>
-    </div>
+	<div class="box" ref="lighting">
+		<div id="lighting"></div>
+	</div>
 </template>
 
 <script>
@@ -67,8 +66,8 @@ export default {
 			this.cube = new THREE.Mesh(geometry, material);
 			// 将网格添加到场景中
 			screen.add(this.cube);
-            
-            // 创建灯光
+
+			// 创建灯光
 			let spotLight = new THREE.SpotLight(0xffffff);
 			spotLight.position.set(-10, 20, 10);
 			spotLight.castShadow = true;

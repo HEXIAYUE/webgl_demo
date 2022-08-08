@@ -1,9 +1,8 @@
 <!-- 组件说明 -->
 <template>
-    <div class="box" ref="dynamiceffect">
-        <div id="dynamiceffect">
-        </div>
-    </div>
+	<div class="box" ref="dynamiceffect">
+		<div id="dynamiceffect"></div>
+	</div>
 </template>
 
 <script>
@@ -51,12 +50,10 @@ export default {
 			// 将渲染器挂载在div app下
 			const dynamiceffect = document.getElementById('dynamiceffect');
 			dynamiceffect.appendChild(this.renderer.domElement);
-            // 添加贴图
-			var texture = new THREE.TextureLoader().load(
-				require('../../assets/img/tietu.jpg')
-			);
+			// 添加贴图
+			var texture = new THREE.TextureLoader().load(require('../../assets/img/tietu.jpg'));
 			texture.wrapS = THREE.RepeatWrapping;
-            texture.wrapT = THREE.RepeatWrapping;
+			texture.wrapT = THREE.RepeatWrapping;
 			// 添加正方体模型
 			// 创建一个正方体模型
 			let geometry = new THREE.BoxGeometry(1, 1, 1);
@@ -70,7 +67,7 @@ export default {
 			// 将网格添加到场景中
 			screen.add(this.cube);
 
-            // 创建灯光
+			// 创建灯光
 			let spotLight = new THREE.SpotLight(0xffffff);
 			spotLight.position.set(-10, 20, 10);
 			spotLight.castShadow = true;

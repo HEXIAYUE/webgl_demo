@@ -74,7 +74,7 @@ export default {
 	box-shadow: 0 0 0.08rem #333;
 	text-align: center;
 	padding: 0.05rem;
-    max-width: 15rem;
-    max-height: 5.8rem;
+	max-width: 15rem;
+	max-height: 5.8rem;
 }
 </style>
